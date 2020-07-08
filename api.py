@@ -1,11 +1,14 @@
 # ./python_code/api.py
 import os
 import random
+import argparse
 from flask import Flask, request, render_template
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
 import numpy as np
 from Blade import Blade
+
+
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
@@ -49,6 +52,9 @@ def BladeList():
     BladeList = [Pyra, Mythra, Dromarch, Nia, Roc, Poppi, Brighid, Aegaeon, Pandoria, Godfrey, Wulfric, Perceval, Vale, Agate, Gorg, Boreas, Dagas, Kasandra, Praxis, Theory, Perun, Kora, Azami, Ursula, Newt, Nim, Sheba, Vess, Adenine, Electra, Zenobia, Finch, Floren, Herald, Dahlia]
     y = BladeList[random.randint(0,34)]
     return {"Blade": strf(y.name), "Element": str(y.element), "Picture": str(y.picture), "Weapon": str(y.weapon), "Summary": str(y.summary)}
+parser = argparse.ArgumentParser(description='Ports')
+parser.add_argument('-p', '--port', type=int, default=5000, help='port number')
+args = parser.parse_args()
 if __name__ == "__main__":
-    app.run(host='0.0.0.0') 
+    app.run(host='0.0.0.0', port = args.port) 
 app.run(debug=True)
