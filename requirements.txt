@@ -14,6 +14,7 @@ Flask-Cors==3.0.8
 Flask-RESTful==0.3.8
 glibc==0.6.1
 graphviz==0.12
+gunicorn==20.0.4
 ipykernel==5.1.2
 ipython==7.7.0
 ipython-genutils==0.2.0
