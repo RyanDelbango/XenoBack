@@ -51,7 +51,7 @@ def BladeList():
 
     BladeList = [Pyra, Mythra, Dromarch, Nia, Roc, Poppi, Aegaeon, Pandoria, Godfrey, Wulfric, Perceval, Vale, Agate, Gorg, Boreas, Dagas, Kasandra, Praxis, Theory, Perun, Kora, Azami, Ursula, Newt, Nim, Sheba, Vess, Adenine, Electra, Zenobia, Finch, Floren, Herald, Dahlia]
     y = BladeList[random.randint(0,33)]
-    return {"Blade": strf(y.name), "Element": str(y.element), "Picture": str(y.picture), "Weapon": str(y.weapon), "Summary": str(y.summary)}
+    return {"Blade": str(y.name), "Element": str(y.element), "Picture": str(y.picture), "Weapon": str(y.weapon), "Summary": str(y.summary)}
 parser = argparse.ArgumentParser(description='Ports')
 parser.add_argument('-p', '--port', type=int, default=5000, help='port number')
 args = parser.parse_args()
