@@ -50,5 +50,5 @@ def BladeList():
     y = BladeList[random.randint(0,34)]
     return {"Blade": strf(y.name), "Element": str(y.element), "Picture": str(y.picture), "Weapon": str(y.weapon), "Summary": str(y.summary)}
 if __name__ == "__main__":
-    app.run() 
+    app.run(host='0.0.0.0') 
 app.run(debug=True)
