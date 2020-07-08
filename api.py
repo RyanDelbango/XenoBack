@@ -9,6 +9,7 @@ from Blade import Blade
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
+@app.route("/")
 def BladeList():
     Pyra = Blade("Pyra", "https://vignette.wikia.nocookie.net/xenoblade/images/4/4e/XC2-element-fire.png/revision/latest/scale-to-width-down/36?cb=20180425030957", "https://babd.wincenworks.com/wp-content/uploads/2017/12/tumblr_p1bvw1TF4g1s755fuo4_r1_1280-2.png", "https://vignette.wikia.nocookie.net/xenoblade/images/f/fd/XC2_Aegis_Sword_icon.png/revision/latest/scale-to-width-down/40?cb=20190404044917", "Pyra is a kind-hearted, mild-mannered, soft spoken young woman who desires peace among both Blades and Drivers.")
     Mythra = Blade("Mythra", "https://vignette.wikia.nocookie.net/xenoblade/images/7/71/XC2-element-light.png/revision/latest/scale-to-width-down/36?cb=20180425030958", "https://vignette.wikia.nocookie.net/p__/images/2/2b/Mythra.png/revision/latest?cb=20180517124742&path-prefix=protagonist", "https://vignette.wikia.nocookie.net/xenoblade/images/4/4c/XC2_Aegis_Sword_II_icon.png/revision/latest/scale-to-width-down/40?cb=20200426104645", "Mythra is confident in herself, reckless, and independent. She has a short temper, a rude disposition, and is not afraid to openly express her thoughts.")
